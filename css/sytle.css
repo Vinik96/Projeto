@@ -1,0 +1,1272 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+	--blue: #26a6ff;
+	--black: #000000;
+	--light-color: #666;
+	--box-shadow:0 .5rem 1 .5rem rgba(0,0,0,.1);
+	--border: .2rem solid rgba(0,0,0,.1);
+	--outline: .1rem solid rgba(0,0,0,.1);
+	--outline-line: .2rem solid var(--black);
+}
+
+*{
+	margin: 0;	
+	padding: 0;
+	font-family:'Roboto';
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	text-decoration: none;
+	text-transform: none;
+	transition: all .2s linear;
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7rem;
+}
+
+body{
+	background: #eee; 
+}
+
+
+.btn{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: .8rem .3rem;
+	font-size: 1.7rem;
+	border-radius: .5rem;
+	border: .2rem solid var(--black);
+	color: var(--black); 
+	cursor: pointer;
+	border-radius: 30px;
+	background: none;
+	text-align: center;
+}
+
+.btn:hover{
+	background: var(--blue);
+	color:#fff;
+}
+	
+#menu-btn {
+	display: none;
+}
+
+h3 {
+    display: block;
+    font-size: 3.50em;
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+section{
+	padding: 2rem 9%;
+}
+
+.heading{
+	text-align: center;
+	padding: 2rem 0;
+	padding-bottom: 3rem;
+	font-size: 3.5rem;
+	color: var(--black)
+}
+	
+header img{
+	width: 80px;
+	height: 80px;
+		
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 9%;
+	background: #fff;
+	box-shadow: var(--box-shadow);
+}
+	
+header .logo i{
+	color: var(--blue) ;
+}
+
+header .navbar a{
+	font-size: 2rem;
+	margin: 1rem;
+	color: var(--black);
+}
+
+header .navbar a:hover{
+	color: var(--blue);
+}
+
+header .navbar .active{
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+header .icons div{
+	height: 4.5rem;
+	width: 4.5rem;
+	line-height: 4.5rem;
+	border-radius: 5rem;
+	background: #eee;
+	color: var(--black);
+	font-size: 2rem;
+	margin-left: .3rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+header .icons div:hover{
+	background: var(--blue);
+	color: #fff;
+}
+
+header .search-form{
+	position: absulute;
+	top: 100%; right: -110%;  /*2rem;*/
+	width: 50rem;
+	height: 5rem;
+	background: #fff;
+	border: 2px solid black;
+	border-radius: 5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	box-shadow: var(--box-shadow);
+}
+	
+header .search-form.active{
+	right: 2rem;
+	transition: .4s linear;
+}
+
+header .search-form input{
+	height: 100%;
+	width: 100%;
+	background: nome;
+	text-transform: nome;
+	font-size: 1.6rem;
+	color: var(--black);
+	padding: 0 1.5rem;
+}
+
+header .search-form button:hover{
+	color: var(--blue);
+}
+
+/* seções */
+.section-p1 {
+	padding: 40px 80px;
+}
+
+.section-m1 {
+	margin: 40px 0;
+}
+
+/*
+header .search-form label{
+	font-size: 2.2rem;
+	padding-right: 1.5rem;
+	color: var(--black);
+	cursor: pointer;
+}
+*/
+
+/* botões */
+
+header .search-form button{
+	font-size: 2.2rem;
+	padding-right: 1.5rem;
+	color: var(--black);
+	cursor: pointer;
+	background: #fff;
+}
+
+header .shopping-cart{
+	position: absolute;
+	top: 110%; right: -110%;
+	padding: 1rem;
+	border-radius: .5rem;
+	box-shadow: var(--box-shadow);
+	width: 35rem;
+	background: #fff;
+}
+
+header .shopping-cart.active{
+	right:2rem;
+	transition: .4s linear;
+}
+
+header .shopping-cart .box{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	margin: 1rem 0;
+}
+
+header .shopping-cart .box img{
+	width: 70px; height: 70px;
+}
+
+header .shopping-cart .box .fa-trash{
+	font-size: 2rem;
+	position: absolute;
+	top:50%; right: 2rem;
+	cursor: pointer;
+	color: var(--light-color);
+	transform: translateY(-50%);
+}
+
+header .shopping-cart .box .fa-trash:hover{
+	color:var(--blue);
+}
+
+header .shopping-cart .box .content h3{
+	color:var(--black);
+	font-size: 1.7rem;
+	padding-bottom: 1rem;
+}
+
+header .shopping-cart .box .content span{
+	color:var(--light-color);
+	font-size: 1.6rem;
+}
+
+header .shopping-cart .box .content .quantidade{
+	padding-left: 1rem;
+}
+
+header .shopping-cart .total{
+	font-size: 2.5rem; padding: 1rem 0; text-align: center;
+	color: var(--black);
+}
+
+header .shopping-cart .btn{
+	display: block; 
+	text-align: center;
+	margin: 1rem;
+}
+
+header .login-form{
+	position: absolute;
+	top: 110%;
+	right: -110%;
+	width: 30rem;
+	box-shadow: var(--box-shadow);
+	padding: 2rem;
+	border-radius: .5rem;
+	background: #fff;
+	text-align: center;
+}
+
+header .login-form.active{
+	right: 2rem;
+	transition: .4s initial;
+}
+
+header .login-form h3{
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+header .login-form.box{
+	width: 100%;
+	margin: .7rem 0;
+	background: #eee;
+	border-radius: .5rem;
+	padding: 1rem;
+	font-size: 1.6rem;
+	color: var(--black);
+	text-transform: nome;
+}
+
+header .login-form p{
+	font-size: 1.4rem;
+	padding: .5rem 0;
+	color: var(--light-color);
+	text-align: left;
+}
+
+header .login-form p a{
+	color: var(--blue);
+	text-decoration: underline;
+	text-align: left;
+}
+
+header .login-form input{
+	height: 4rem;
+	width: 100%;
+	background: nome;
+	text-transform: nome;
+	font-size: 1.6rem;
+	color: var(--black);
+	padding: 0 1.5rem;
+	border: 1px solid black;
+	border-radius: 1rem;
+}
+
+/* pagina principal*/
+
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../imagens/familia-DC.jpg); /* The image used */
+	background-position: center;
+	width:610px;
+	height:661px;
+	background-size: relative; 
+	padding-top: 20rem;
+	padding-bottom: 20rem;
+}
+
+.home.content { 
+	text-align: center;
+	width: 60rem;
+}
+
+.home.content h3 {
+	color: #000; /* var(--black); */
+	font-size: 7.5rem;
+	text-transform: nome;
+}
+
+.home.content h3 span {
+	color: var(--blue);
+}
+
+.home.content p {
+	color: #000;
+	font-size: 7.5rem;
+	padding: 1rem 0;
+	line-height: 2.8;
+}
+
+/* pagina "sobre" */
+
+#sobre {
+	display: flex;
+	flex-direction: column;
+	background-image: url(../imagens/Alien2.jpg) ; /* The image used */
+	background-position: top 25% right 0;
+	width: 100%;
+	height: 90vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+}
+
+#sobre .content { 
+	padding-top: 10rem;
+	text-align: center;
+	width: 60rem;
+}
+
+#sobre .content h3 {
+	color: var(--blue);
+	font-size: 4.5rem;
+}
+
+#sobre .content h3 span {
+	color: #ffc21e;
+}
+
+#sobre .content p {
+	color: #ffffff;
+	font-size: 1.5rem;
+	padding: 5rem 0;
+	line-height: 1.8;
+}
+
+#sobre .content a{
+	color: #ffc21e;
+	font-size: 1.5rem;
+	padding: 5rem 0;
+	line-height: 1.8;
+	transform: 0 .2s ease;
+}
+
+#sobre .content a:hover{
+	color: var(--blue);
+}
+
+#fundador {
+	display: flex;
+	flex-direction: row-reverse;
+	background-image: url(../imagens/fundador.jpg) ; /* The image used */
+	background-position: top 25% right 0;
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+}
+
+#fundador .content { 
+	padding-top: 10rem;
+	text-align: center;
+	width: 60rem;
+}
+
+#fundador .content h3 {
+	color: var(--blue);
+	font-size: 4.5rem;
+}
+
+#fundador .content h3 span {
+	color: #ffc21e;
+}
+
+#fundador .content p {
+	color: #ffffff;
+	font-size: 1.5rem;
+	padding: 5rem 0;
+	line-height: 1.8;
+}
+
+#fundador .content a{
+	color: #ffc21e;
+	font-size: 1.5rem;
+	padding: 5rem 0;
+	line-height: 1.8;
+	transform: 0 .2s ease;
+}
+
+
+/* EXIBIÇÃO DE PRODUTOS */
+
+#produtos1 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos1 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color:#ffffff ;
+}
+
+#produtos1 .pro {
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	color:var(--black);
+	transition: 0 .2s ease;
+}
+
+#produtos1 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+}
+
+#produtos1 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+
+#produtos1 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+}​​​​​​​
+
+#produtos1 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+}
+
+#produtos1 .pro i {
+	font-size: 12px;
+	color: rgb(243, 181, 25);
+}
+
+#produtos1 .pro .des h4 {
+	padding-top: 7px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #ffc21e;
+	transition: 0 .2s ease;
+}
+
+#produtos1 .pro .cart{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50px;
+	background-color: #e8f6ea;
+	font-weight: 500;
+	color: #088178;
+}
+
+#produtos2 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos2 .pro-container2 {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos2 .pro2 {
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .2s ease;
+}
+
+#produtos2 .pro2:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+}
+
+#produtos2 .pro2 img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+
+#produtos2 .pro2 .des2 {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+}​​​​​​​
+
+#produtos2 .pro2 .des2 span{
+	color: #606063;
+	font-size: 12rem;
+}
+
+#produtos2 .pro2 i {
+	font-size: 12px;
+	color: rgb(243, 181, 25);
+}
+
+#produtos2 .pro2 .des2 h4 {
+	padding-top: 7px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #ffc21e;
+}
+
+#produtos2 .pro2 .cart{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 50px;
+	background-color: #e8f6ea;
+	font-weight: 500;
+	color: #088178;
+}
+
+/* pagina "produtos" */
+
+#produtos3 {
+	background-image: url(../imagens/GoldenGuns.jpg) ; /* The image used */
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 10rem;
+}
+
+#produtos3 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos3 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos3 .pro {
+	background-color: #ffffff;
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .1s ease;
+}
+
+#produtos3 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+	background-image: url(../imagens/ouro2.jpg) ;
+}
+
+#produtos3 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+
+#produtos3 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+}​​​​​​​
+ 
+#produtos3 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+	transition: 0 .2s ease;
+}
+
+#produtos3 .pro a {
+	font-size: 12px;
+	color: #000;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#produtos3 .pro .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	transition: 0 .2s ease;
+}
+
+#produtos3 .pro a:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos3 .pro .des h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos4 {
+	background-image: url(../imagens/Separatistas.jpg) ; /* The image used */
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 10rem;
+}
+
+#produtos4 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos4 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos4 .pro {
+	background-color: #ffffff;
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .1s ease;
+}
+
+#produtos4 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+	background-image: url(../imagens/ouro2.jpg) ;
+}
+
+#produtos4 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+
+#produtos4 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+}​​​​​​​
+ 
+#produtos4 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+	transition: 0 .2s ease;
+}
+
+#produtos4 .pro a {
+	font-size: 12px;
+	color: #000;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#produtos4 .pro .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	transition: 0 .2s ease;
+}
+
+#produtos4 .pro a:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos4 .pro .des h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos5 {
+	background-image: url(../imagens/Batalha-de-geonosis.jpg) ; /* The image used */
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 10rem;
+}
+
+#produtos5 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos5 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos5 .pro {
+	background-color: #ffffff;
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .1s ease;
+}
+
+#produtos5 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+	background-image: url(../imagens/ouro2.jpg) ;
+}
+
+#produtos5 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+#produtos5 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+}​​​​​​​
+ 
+#produtos5 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+	transition: 0 .2s ease;
+}
+
+#produtos5 .pro a {
+	font-size: 12px;
+	color: #000;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#produtos5 .pro .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	transition: 0 .2s ease;
+}
+
+#produtos5 .pro a:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos5 .pro .des h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos6 {
+	background-image: url(../imagens/Imperio.jpg) ; /* The image used */
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 10rem;
+}
+
+#produtos6 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos6 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos6 .pro {
+	background-color: #ffffff;
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .1s ease;
+}
+
+#produtos6 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+	background-image: url(../imagens/ouro2.jpg) ;
+}
+
+#produtos6 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+#produtos6 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+}​​​​​​​
+ 
+#produtos6 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+	transition: 0 .2s ease;
+}
+
+#produtos6 .pro a {
+	font-size: 12px;
+	color: #000;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#produtos6 .pro .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	transition: 0 .2s ease;
+}
+
+#produtos6 .pro a:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos6 .pro .des h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos7 {
+	background-image: url(../imagens/Aliaça-Rebelde.jpg) ; /* The image used */
+	width: 100%;
+	height: 135vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 10rem;
+}
+
+#produtos7 p {
+	text-align: center;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.2rem 0;
+	line-height: 1.8;
+	color:var(--white);
+	transition: 0 .2s ease;
+}
+
+#produtos7 .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#produtos7 .pro {
+	background-color: #ffffff;
+	width: 23%;
+	min-width: 250px;
+	padding: 10px 12px;
+	border: 5px solid #000;
+	border-radius: 25px;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+	transition: 0 .1s ease;
+}
+
+#produtos7 .pro:hover{
+	transform: scale(1.1);
+	color:var(--blue);
+	background-image: url(../imagens/ouro2.jpg) ;
+}
+
+#produtos7 .pro img {
+	width: 100%;
+	border-radius: 20px;
+	border: 5px solid #000;
+}
+
+#produtos7 .pro .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+}​​​​​​​
+ 
+#produtos7 .pro .des span{
+	color: #606063;
+	font-size: 12rem;
+	transition: 0 .2s ease;
+}
+
+#produtos7 .pro a {
+	font-size: 12px;
+	color: #000;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#produtos7 .pro .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #000;
+	transition: 0 .2s ease;
+}
+
+#produtos7 .pro a:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#produtos7 .pro .des h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+/* pagina "serviços" */
+
+#serviços {
+	background-image:  url(../imagens/espaço-2.jpg) ;
+	width: 100%;
+	height: 100vh; 
+	background-size: cover; 
+	padding: 0 80px;
+	border: 5px solid #ffc21e;
+	border-radius: 5px;
+	padding-top: 15rem;
+}
+
+#serviços .pro-container a {
+	text-align: center;
+	font-size: 3.5rem;
+	padding: 0.2rem 0;
+	line-height: 0.6;
+	color:var(--blue) ;
+	transition: 0 .2s ease;
+}
+
+#serviços .pro-container {
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+}
+
+#serviços .pro-container a:hover{
+	color:#ffde00;
+}
+
+#serviços .pro1 {
+	background-image: url(../imagens/deserto.jpg) ; 
+	width: 400px;
+	height: auto;
+	padding: 10px 10px;
+	cursor: poiter;
+	border-radius: 100%;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 15px;
+	transition: 0 .1s ease;
+}
+
+#serviços .pro1:hover{
+	transform: scale(1.1);
+}
+
+#serviços .pro1 img {
+	width: 50%;
+	height: auto;
+}
+
+#serviços .pro1 img:hover {
+	transform: scale(1.1);
+}
+
+#serviços .pro1 .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+}​​​​​​​
+
+#serviços .pro1 a {
+	font-size: 12px;
+	transition: 0 .2s ease;
+}
+
+#serviços .pro2 {
+	background-image: url(../imagens/corretor.jpg) ; 
+	width: 400px;
+	height: auto;
+	padding: 10px 10px;
+	cursor: poiter;
+	border-radius: 100%;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 15px;
+	transition: 0 .1s ease;
+}
+
+#serviços .pro2:hover{
+	transform: scale(1.1);
+}
+
+#serviços .pro2 img {
+	width: 50%;
+	height: auto;
+}
+
+#serviços .pro2 img:hover {
+	transform: scale(1.1);
+}
+
+#serviços .pro2 .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	cursor: poiter;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;
+}​​​​​​​
+
+#serviços .pro2 a {
+	font-size: 12px;
+	transition: 0 .2s ease;
+}
+
+#serviços .pro2 .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color:var(--blue);
+	transition: 0 .2s ease;
+}
+
+#serviços .pro3 {
+	background-image: url(../imagens/CIS.jpg)  ; 
+	width: 400px;
+	height: auto;
+	padding: 10px 10px;
+	cursor: poiter;
+	border-radius: 100%;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 15px;
+	transition: 0 .1s ease;
+}
+
+#serviços .pro3:hover{
+	transform: scale(1.1);
+	color:  #ffde00;
+}
+
+#serviços .pro3 img {
+	width: 50%;
+	height: auto;
+}
+
+#serviços .pro3 img:hover {
+	transform: scale(1.1);
+}
+
+#serviços .pro3 .des {​​​​​​​
+	text-align: start;
+	padding: 10px 0;
+	transition: 0 .2s ease;
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.02);
+	margin: 15px 0;	
+	transition: 0 .1s ease;
+}​​​​​​​
+
+#serviços .pro3 a {
+	font-size: 12px;
+	transform: scale(1.1);
+	transition: 0 .2s ease;
+}
+
+#serviços .pro3 .des h4 {
+	padding-top: 3px;
+	font-size: 15px;
+	font-weight: 700;
+	color:var(--blue);
+	transition: 0 .2s ease;
+}
+
+#serviços h4:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+#serviços .pro3 .des p:hover{
+	color:  #ffde00;
+	transform: scale(1.1);
+}
+
+
+
+
+
+
+/*   fim css produtos     
+
+.input-container {
+	height: 50px;
+	position: relative;
+	width: 100%;
+}
+
+.ic1 {
+	margin-top: 40px;
+}
+
+.ic2 {
+	margin-top: 30px;
+}
+
+ FIM BOX DE PRODUTOS PARA TESTES */
